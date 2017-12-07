@@ -2,7 +2,7 @@
 import {Component, NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
-import {FeatureModule} from "./FeatureModule";
+import {NgFeatureModule} from "./NgFeatureModule";
 
 @Component({
     selector: 'app',
@@ -22,7 +22,7 @@ export class AppComponent {
     imports     : [
         BrowserModule,
         CommonModule,
-        FeatureModule.forRoot({
+        NgFeatureModule.forRoot({
             '/test/route': ['test-feature']
         })
     ],

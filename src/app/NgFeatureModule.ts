@@ -2,12 +2,12 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {FeatureConfig, Features} from "./Service/Features";
 import {RouterModule} from "@angular/router";
 import {FeatureGuard} from "./Service/FeatureGuard";
-import {CoreModule} from "@ng-app-framework/core";
+import {NgCoreModule} from "@ng-app-framework/core";
 
 
 @NgModule({
     imports  : [
-        CoreModule,
+        NgCoreModule,
         RouterModule,
     ],
     exports  : [],
@@ -17,11 +17,11 @@ import {CoreModule} from "@ng-app-framework/core";
         FeatureConfig
     ]
 })
-export class FeatureModule {
+export class NgFeatureModule {
 
     public static forRoot(config: FeatureConfig): ModuleWithProviders {
         return {
-            ngModule : FeatureModule,
+            ngModule : NgFeatureModule,
             providers: [{
                 provide : FeatureConfig,
                 useValue: config
