@@ -1,6 +1,6 @@
 import {EventEmitter} from "@angular/core";
 import {FeatureGuard} from "../../src/app/Service/FeatureGuard";
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs/Rx";
 
 export class FeatureGuardShunt extends FeatureGuard {
 
